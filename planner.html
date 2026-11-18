@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Планировщик — TravelMap</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/planner.css"></head>
+<body>
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">T</span><span>TravelMap</span></a><button class="nav-toggle" type="button" aria-label="Открыть меню">☰</button>
+    <nav class="main-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="map.html">Карта</a><a href="destinations.html">Направления</a><a class="active" href="planner.html">Маршруты</a><a href="favorites.html">Избранное <span class="favorite-count">0</span></a></nav><a class="btn btn-primary nav-cta" href="#plannerForm">Создать маршрут</a>
+  </header>
+  <main class="planner-page">
+    <aside class="planner-form-panel"><p class="eyebrow dark">Планировщик путешествий</p><h1>Соберите идеальный маршрут</h1>
+      <form id="plannerForm">
+        <label>Страна<select id="countrySelect"></select></label>
+        <label>Город<select id="citySelect"><option value="Алматы">Алматы</option><option value="Астана">Астана</option></select></label>
+        <label>Дата начала<input id="startDate" type="date"></label>
+        <label>Количество дней<select id="daysSelect"><option>3</option><option selected>7</option><option>10</option></select></label>
+        <fieldset><legend>Интересующие категории</legend><div class="category-checks" id="categoryChecks"></div></fieldset>
+        <label>Бюджет<select id="budgetSelect"><option value="economy">Экономный</option><option value="medium" selected>Средний</option><option value="premium">Премиум</option></select></label>
+        <button class="btn btn-primary wide" type="submit">Предложить маршрут</button>
+      </form>
+    </aside>
+    <section class="planner-content">
+      <div class="planner-toolbar"><div><p class="eyebrow dark">Ваш маршрут</p><h2 id="routeTitle">Алматы · 7 дней</h2></div><div class="toolbar-actions"><button class="btn btn-secondary" id="saveRoute" type="button">Сохранить</button><button class="btn btn-secondary" id="printRoute" type="button">Печать</button><a class="btn btn-accent" id="viewRouteMap" href="map.html">На карте</a></div></div>
+      <div class="route-summary" id="routeSummary"></div><p class="budget-note">Бюджет сохраняется как предпочтение. Проверенные цены пока не включены в демонстрационные данные.</p><div class="route-days" id="routeDays"></div>
+    </section>
+  </main>
+  <script src="js/world-data.js"></script><script src="js/main.js"></script><script src="js/planner.js"></script>
+</body>
+</html>

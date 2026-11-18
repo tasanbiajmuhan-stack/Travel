@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Достопримечательности — TravelMap</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">T</span><span>TravelMap</span></a><button class="nav-toggle" type="button" aria-label="Открыть меню">☰</button>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="index.html">Главная</a><a href="map.html">Карта</a><a class="active" href="destinations.html">Направления</a><a href="planner.html">Маршруты</a><a href="favorites.html">Избранное <span class="favorite-count">0</span></a>
+    </nav><a class="btn btn-primary nav-cta" href="planner.html">Начать путешествие</a>
+  </header>
+  <main class="inner-page">
+    <section class="page-header"><p class="eyebrow dark">Каталог мест</p><h1>Интересные места</h1><p>Демонстрационная подборка: фотографии иллюстративные, координаты ориентировочные. Рейтинги не показываем без проверенных источников.</p></section>
+    <section class="catalog-toolbar"><input id="destinationSearch" type="search" placeholder="Поиск по названию, городу или стране"><select id="destinationCategory"><option value="all">Все категории</option></select><select id="destinationSort"><option value="name">По названию</option><option value="duration">По продолжительности</option><option value="category">По категории</option></select></section>
+    <section class="catalog-grid" id="destinationCatalog"></section>
+  </main>
+  <footer class="footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">T</span><span>TravelMap</span></a><p>Путешествуйте умнее. Открывайте больше.</p></footer>
+  <script src="js/world-data.js"></script><script src="js/main.js"></script><script src="js/destinations.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Карта — TravelMap</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.31/esri/themes/light/main.css">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">T</span><span>TravelMap</span></a>
+    <button class="nav-toggle" type="button" aria-label="Открыть меню">☰</button>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="index.html">Главная</a><a class="active" href="map.html">Карта</a><a href="destinations.html">Направления</a>
+      <a href="planner.html">Маршруты</a><a href="favorites.html">Избранное <span class="favorite-count">0</span></a>
+    </nav><a class="btn btn-primary nav-cta" href="planner.html">Начать путешествие</a>
+  </header>
+  <main class="map-page">
+    <aside class="map-sidebar">
+      <div class="sidebar-heading"><p class="eyebrow dark">Исследуйте мир</p><h1>Карта путешествий</h1><p class="map-intro">Выберите страну на карте или найдите место.</p></div>
+      <form class="map-search" id="mapSearch"><input id="mapSearchInput" type="search" placeholder="Поиск места"><button type="submit">⌕</button></form>
+      <div class="map-filters" id="mapFilters" aria-label="Фильтр категорий"></div>
+      <div class="day-filter" id="dayFilter" hidden><span>День маршрута:</span><select id="routeDaySelect"></select></div>
+      <div class="map-explorer" id="mapExplorer"></div>
+    </aside>
+    <section class="map-wrap"><div id="viewDiv"></div><div class="map-status" id="mapStatus">Загрузка ArcGIS...</div>
+      <button class="basemap-toggle" id="basemapToggle" type="button">Спутниковый вид</button><div class="selected-day" id="selectedDay" hidden></div>
+    </section>
+  </main>
+  <script src="js/world-data.js"></script><script src="js/main.js"></script><script src="https://js.arcgis.com/4.31/"></script><script src="js/map.js"></script>
+</body>
+</html>
